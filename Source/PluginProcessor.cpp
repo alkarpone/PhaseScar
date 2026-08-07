@@ -91,6 +91,9 @@ void PhaseScarAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBl
 
     dryBuffer.setSize (juce::jmax (1, getTotalNumOutputChannels()), juce::jmax (1, samplesPerBlock));
 
+    spectrumFifo.prepare (1 << 15);
+    spectrumFifo.reset();
+
     const auto rampSeconds = 0.05;
     inputGainSmoothed.reset (sampleRate, rampSeconds);
     outputGainSmoothed.reset (sampleRate, rampSeconds);
@@ -262,6 +265,10 @@ void PhaseScarAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, ju
     for (int ch = 0; ch < numChannels; ++ch)
         outputPeak = juce::jmax (outputPeak, buffer.getMagnitude (ch, 0, numSamples));
     meteringData.pushOutputPeak (outputPeak);
+
+    // Real-time-safe push of the post-processing mono mixdown for the GUI spectrum analyzer.
+    // No allocations, no locks, no repaint calls happen inside push().
+    spectrumFifo.push (buffer);
 }
 
 //==============================================================================

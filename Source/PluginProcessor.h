@@ -10,6 +10,7 @@
 #include "DSP/PostEQProcessor.h"
 #include "DSP/OutputProtection.h"
 #include "DSP/MeteringData.h"
+#include "DSP/SpectrumFifo.h"
 
 //==============================================================================
 class PhaseScarAudioProcessor  : public juce::AudioProcessor
@@ -55,6 +56,7 @@ public:
     //==============================================================================
     juce::AudioProcessorValueTreeState apvts;
     PhaseScar::MeteringData meteringData;
+    PhaseScar::SpectrumFifo spectrumFifo;
 
 private:
     //==============================================================================

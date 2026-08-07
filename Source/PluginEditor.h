@@ -3,6 +3,7 @@
 #include <JuceHeader.h>
 #include "PluginProcessor.h"
 #include "PhaseScarLookAndFeel.h"
+#include "SpectrumAnalyzerComponent.h"
 
 //==============================================================================
 /** Compact vertical level meter, fed from the UI timer (never from the audio thread). */
@@ -102,6 +103,8 @@ private:
 
     PhaseScarLevelMeter headerInputMeter { "IN" }, headerOutputMeter { "OUT" };
     PhaseScarLevelMeter outputSectionInputMeter { "IN" }, outputSectionOutputMeter { "OUT" };
+
+    std::unique_ptr<PhaseScar::SpectrumAnalyzerComponent> spectrumAnalyzer;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (PhaseScarAudioProcessorEditor)
 };

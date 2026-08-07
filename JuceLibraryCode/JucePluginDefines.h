@@ -41,7 +41,7 @@
  #define JucePlugin_Enable_ARA             0
 #endif
 #ifndef  JucePlugin_Name
- #define JucePlugin_Name                   "PHASE SCAR 0.3.0"
+ #define JucePlugin_Name                   "PHASE SCAR 0.4.0"
 #endif
 #ifndef  JucePlugin_Desc
  #define JucePlugin_Desc                   "Flanger, distortion and moving notch multi-effect"
@@ -77,13 +77,13 @@
  #define JucePlugin_EditorRequiresKeyboardFocus  0
 #endif
 #ifndef  JucePlugin_Version
- #define JucePlugin_Version                0.3.0
+ #define JucePlugin_Version                0.4.0
 #endif
 #ifndef  JucePlugin_VersionCode
- #define JucePlugin_VersionCode            0x300
+ #define JucePlugin_VersionCode            0x400
 #endif
 #ifndef  JucePlugin_VersionString
- #define JucePlugin_VersionString          "0.3.0"
+ #define JucePlugin_VersionString          "0.4.0"
 #endif
 #ifndef  JucePlugin_VSTUniqueID
  #define JucePlugin_VSTUniqueID            JucePlugin_PluginCode
@@ -137,7 +137,7 @@
  #define JucePlugin_IAASubType             JucePlugin_PluginCode
 #endif
 #ifndef  JucePlugin_IAAName
- #define JucePlugin_IAAName                "Vojta: PHASE SCAR 0.3.0"
+ #define JucePlugin_IAAName                "Vojta: PHASE SCAR 0.4.0"
 #endif
 #ifndef  JucePlugin_VSTNumMidiInputs
  #define JucePlugin_VSTNumMidiInputs       16
@@ -155,7 +155,7 @@
  #define JucePlugin_ARAFactoryID           "com.Vojta.PhaseScar.factory"
 #endif
 #ifndef  JucePlugin_ARADocumentArchiveID
- #define JucePlugin_ARADocumentArchiveID   "com.Vojta.PhaseScar.aradocumentarchive.0.3.0"
+ #define JucePlugin_ARADocumentArchiveID   "com.Vojta.PhaseScar.aradocumentarchive.0.4.0"
 #endif
 #ifndef  JucePlugin_ARACompatibleArchiveIDs
  #define JucePlugin_ARACompatibleArchiveIDs  ""

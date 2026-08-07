@@ -54,6 +54,7 @@
 		749200AAC0C25AF7FAAB611A /* include_juce_dsp.mm */ = {isa = PBXBuildFile; fileRef = 761811174CE3BA8A425A19C0; };
 		790C9F4D369D7C1229972A4D /* BinaryData3.cpp */ = {isa = PBXBuildFile; fileRef = FF94820B2F87679ED17F68FC; };
 		79D86A27A5F4E6DCDF9D34C7 /* CoreAudio.framework */ = {isa = PBXBuildFile; fileRef = 09D76DEAD6380974D5F37480; };
+		83C3DBE88251FD01869B9D3C /* SpectrumAnalyzerComponent.cpp */ = {isa = PBXBuildFile; fileRef = BB851FC8D625287C7611D18E; };
 		8B5FCC53920E54C0D699A920 /* Security.framework */ = {isa = PBXBuildFile; fileRef = 79FF8A702F60EF7DD7548933; };
 		900FC6B099C66ECD92AAEC79 /* NotchBankProcessor.cpp */ = {isa = PBXBuildFile; fileRef = 18F18BFF05B1DDC270931D84; };
 		95B4AD995E1E537C6084BB23 /* include_juce_gui_basics.mm */ = {isa = PBXBuildFile; fileRef = FB5F841CF069BE8F5F4BACF0; };
@@ -107,11 +108,11 @@
 		28A280C4A38A4AEE897FE462 /* Foundation.framework */ /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		29D3CCE59B270AFFEBCE8A6F /* All.entitlements */ /* All.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = All.entitlements; path = All.entitlements; sourceTree = SOURCE_ROOT; };
 		2C041CA45E68D887DCC59F84 /* AudioToolbox.framework */ /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		33EDE7A32F55789310E8704F /* Shared Code */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPHASE SCAR v0_3_0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		33EDE7A32F55789310E8704F /* Shared Code */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPHASE SCAR v0_4_0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		373D20666D31CCE58037EF9C /* juce_dsp */ /* juce_dsp */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_dsp; path = "~/JUCE/modules/juce_dsp"; sourceTree = "<absolute>"; };
 		37836FFB8A292CDEF4FD55F9 /* Metal.framework */ /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		37DE47574C5F230269E57914 /* BinaryData.cpp */ /* BinaryData.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = BinaryData.cpp; path = ../../JuceLibraryCode/BinaryData.cpp; sourceTree = SOURCE_ROOT; };
-		38459E5751E827D4F426A27A /* VST3 */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PHASE SCAR v0_3_0.vst3"; sourceTree = BUILT_PRODUCTS_DIR; };
+		38459E5751E827D4F426A27A /* VST3 */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PHASE SCAR v0_4_0.vst3"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3846795343B79A705A2331AA /* include_juce_audio_plugin_client_ARA.cpp */ /* include_juce_audio_plugin_client_ARA.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = include_juce_audio_plugin_client_ARA.cpp; path = ../../JuceLibraryCode/include_juce_audio_plugin_client_ARA.cpp; sourceTree = SOURCE_ROOT; };
 		3AC76F7E816C7005EBCEF045 /* PluginEditor.h */ /* PluginEditor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PluginEditor.h; path = ../../Source/PluginEditor.h; sourceTree = SOURCE_ROOT; };
 		3C2F8B2BCEE27E17CEE74147 /* RecentFilesMenuTemplate.nib */ /* RecentFilesMenuTemplate.nib */ = {isa = PBXFileReference; lastKnownFileType = file.nib; name = RecentFilesMenuTemplate.nib; path = RecentFilesMenuTemplate.nib; sourceTree = SOURCE_ROOT; };
@@ -128,6 +129,7 @@
 		575C90016DFEF96E2B7E94C3 /* PreEQProcessor.cpp */ /* PreEQProcessor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PreEQProcessor.cpp; path = ../../Source/DSP/PreEQProcessor.cpp; sourceTree = SOURCE_ROOT; };
 		58C32465AD00C9197E3A950E /* OutputProtection.h */ /* OutputProtection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OutputProtection.h; path = ../../Source/DSP/OutputProtection.h; sourceTree = SOURCE_ROOT; };
 		59ACC80F5863F89369E1ED62 /* PhaseScarLookAndFeel.cpp */ /* PhaseScarLookAndFeel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PhaseScarLookAndFeel.cpp; path = ../../Source/PhaseScarLookAndFeel.cpp; sourceTree = SOURCE_ROOT; };
+		5A05F7675F4E29741534758E /* SpectrumFifo.h */ /* SpectrumFifo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SpectrumFifo.h; path = ../../Source/DSP/SpectrumFifo.h; sourceTree = SOURCE_ROOT; };
 		5A8BE51068D50E4DA2AF146D /* juce_audio_formats */ /* juce_audio_formats */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_formats; path = "~/JUCE/modules/juce_audio_formats"; sourceTree = "<absolute>"; };
 		5F2561E87F19E209B2CCDDBB /* BinaryData.h */ /* BinaryData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BinaryData.h; path = ../../JuceLibraryCode/BinaryData.h; sourceTree = SOURCE_ROOT; };
 		60A7F1FB2AFC1EABD464771E /* IOKit.framework */ /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
@@ -152,12 +154,14 @@
 		A1E5266E3C8CF89023EE9B7C /* QuartzCore.framework */ /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A282D77C23C59CF134BF6E57 /* Info-VST3.plist */ /* Info-VST3.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-VST3.plist"; path = "Info-VST3.plist"; sourceTree = SOURCE_ROOT; };
 		A2EA69EF9904DDECA3518C56 /* include_juce_core_CompilationTime.cpp */ /* include_juce_core_CompilationTime.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = include_juce_core_CompilationTime.cpp; path = ../../JuceLibraryCode/include_juce_core_CompilationTime.cpp; sourceTree = SOURCE_ROOT; };
+		A36D8E4DA5D22756BACB96B5 /* SpectrumAnalyzerComponent.h */ /* SpectrumAnalyzerComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SpectrumAnalyzerComponent.h; path = ../../Source/SpectrumAnalyzerComponent.h; sourceTree = SOURCE_ROOT; };
 		A7D9D9FCEFACFC99A9565221 /* juce_audio_utils */ /* juce_audio_utils */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_utils; path = "~/JUCE/modules/juce_audio_utils"; sourceTree = "<absolute>"; };
 		A9097243B9F0DE3BECAB9D3A /* include_juce_graphics.mm */ /* include_juce_graphics.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_graphics.mm; path = ../../JuceLibraryCode/include_juce_graphics.mm; sourceTree = SOURCE_ROOT; };
 		AA157D94DCE1D9BD5144C8BA /* include_juce_audio_utils.mm */ /* include_juce_audio_utils.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_utils.mm; path = ../../JuceLibraryCode/include_juce_audio_utils.mm; sourceTree = SOURCE_ROOT; };
 		AE5B75D8736A7CAE7A96A664 /* Shared_Code.entitlements */ /* Shared_Code.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Shared_Code.entitlements; path = Shared_Code.entitlements; sourceTree = SOURCE_ROOT; };
 		AEAE2B09E812C490679CE05A /* Waveshapers.h */ /* Waveshapers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Waveshapers.h; path = ../../Source/DSP/Waveshapers.h; sourceTree = SOURCE_ROOT; };
 		B69DAEA6EDB0DFF568BFA938 /* OutputProtection.cpp */ /* OutputProtection.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = OutputProtection.cpp; path = ../../Source/DSP/OutputProtection.cpp; sourceTree = SOURCE_ROOT; };
+		BB851FC8D625287C7611D18E /* SpectrumAnalyzerComponent.cpp */ /* SpectrumAnalyzerComponent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = SpectrumAnalyzerComponent.cpp; path = ../../Source/SpectrumAnalyzerComponent.cpp; sourceTree = SOURCE_ROOT; };
 		BC703EF896AA2387AF41A35B /* PreEQProcessor.h */ /* PreEQProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PreEQProcessor.h; path = ../../Source/DSP/PreEQProcessor.h; sourceTree = SOURCE_ROOT; };
 		BCC14B5F15FD2EC968E0F5CE /* PluginProcessor.cpp */ /* PluginProcessor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PluginProcessor.cpp; path = ../../Source/PluginProcessor.cpp; sourceTree = SOURCE_ROOT; };
 		BD879E623E2D5A1E45A95C96 /* Accelerate.framework */ /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
@@ -182,7 +186,7 @@
 		F5F5282C7B4C0E771A2FCB94 /* juce_audio_plugin_client */ /* juce_audio_plugin_client */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_plugin_client; path = "~/JUCE/modules/juce_audio_plugin_client"; sourceTree = "<absolute>"; };
 		F60DDF1501205BD8F5ED5000 /* phase_scar_logo.png */ /* phase_scar_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = phase_scar_logo.png; path = ../../Assets/phase_scar_logo.png; sourceTree = SOURCE_ROOT; };
 		F6FE918AA6C73F862CA8281F /* PhaseScarParameters.h */ /* PhaseScarParameters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PhaseScarParameters.h; path = ../../Source/DSP/PhaseScarParameters.h; sourceTree = SOURCE_ROOT; };
-		F7945A5FCF595F8E280B128D /* Standalone Plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PHASE SCAR v0_3_0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7945A5FCF595F8E280B128D /* Standalone Plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PHASE SCAR v0_4_0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB07C3A4F357BC3C4D7E8301 /* juce_audio_processors */ /* juce_audio_processors */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_processors; path = "~/JUCE/modules/juce_audio_processors"; sourceTree = "<absolute>"; };
 		FB1A0B641171DF4017E09BFB /* include_juce_gui_basics_4.cpp */ /* include_juce_gui_basics_4.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = include_juce_gui_basics_4.cpp; path = ../../JuceLibraryCode/include_juce_gui_basics_4.cpp; sourceTree = SOURCE_ROOT; };
 		FB5F841CF069BE8F5F4BACF0 /* include_juce_gui_basics.mm */ /* include_juce_gui_basics.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_gui_basics.mm; path = ../../JuceLibraryCode/include_juce_gui_basics.mm; sourceTree = SOURCE_ROOT; };
@@ -343,6 +347,8 @@
 				BCC14B5F15FD2EC968E0F5CE,
 				3AC76F7E816C7005EBCEF045,
 				667391F9A69F2E7833139C09,
+				A36D8E4DA5D22756BACB96B5,
+				BB851FC8D625287C7611D18E,
 				20660C62052BA933EA90059D,
 				59ACC80F5863F89369E1ED62,
 				40A70906752058D23E20A984,
@@ -371,6 +377,7 @@
 				58C32465AD00C9197E3A950E,
 				B69DAEA6EDB0DFF568BFA938,
 				E1E1095F9971A40736A53F97,
+				5A05F7675F4E29741534758E,
 			);
 			name = DSP;
 			sourceTree = "<group>";
@@ -749,6 +756,7 @@
 			files = (
 				28EBAFF41D3ADFEF19A9CD43,
 				0E83BA03E72121BCC0E7FDFA,
+				83C3DBE88251FD01869B9D3C,
 				2F22287B921B62584BD1C88A,
 				189D9D67F6AEC5586E28ADC9,
 				2AD2C7642425FAE202991188,
@@ -871,7 +879,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_CODE_SIGN_FLAGS = "--dryrun";
-				PRODUCT_NAME = "PHASE SCAR v0_3_0";
+				PRODUCT_NAME = "PHASE SCAR v0_4_0";
 				SDKROOT = macosx;
 				WARNING_CFLAGS = "-Wreorder";
 				ZERO_LINK = NO;
@@ -926,7 +934,7 @@
 					"JucePlugin_Build_LV2=0",
 					"JucePlugin_Enable_IAA=0",
 					"JucePlugin_Enable_ARA=0",
-					"JucePlugin_Name=\\\"PHASE\\ SCAR\\ 0.3.0\\\"",
+					"JucePlugin_Name=\\\"PHASE\\ SCAR\\ 0.4.0\\\"",
 					"JucePlugin_Desc=\\\"Flanger,\\ distortion\\ and\\ moving\\ notch\\ multi-effect\\\"",
 					"JucePlugin_Manufacturer=\\\"Vojta\\\"",
 					"JucePlugin_ManufacturerWebsite=\\\"https://example.com\\\"",
@@ -938,9 +946,9 @@
 					"JucePlugin_ProducesMidiOutput=0",
 					"JucePlugin_IsMidiEffect=0",
 					"JucePlugin_EditorRequiresKeyboardFocus=0",
-					"JucePlugin_Version=0.3.0",
-					"JucePlugin_VersionCode=0x300",
-					"JucePlugin_VersionString=\\\"0.3.0\\\"",
+					"JucePlugin_Version=0.4.0",
+					"JucePlugin_VersionCode=0x400",
+					"JucePlugin_VersionString=\\\"0.4.0\\\"",
 					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
 					"JucePlugin_VSTCategory=kPlugCategEffect",
 					"JucePlugin_Vst3Category=\\\"Fx\\\"",
@@ -958,13 +966,13 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757278",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"Vojta:\\ PHASE\\ SCAR\\ 0.3.0\\\"",
+					"JucePlugin_IAAName=\\\"Vojta:\\ PHASE\\ SCAR\\ 0.4.0\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JucePlugin_ARAContentTypes=0",
 					"JucePlugin_ARATransformationFlags=0",
 					"JucePlugin_ARAFactoryID=\\\"com.Vojta.PhaseScar.factory\\\"",
-					"JucePlugin_ARADocumentArchiveID=\\\"com.Vojta.PhaseScar.aradocumentarchive.0.3.0\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.Vojta.PhaseScar.aradocumentarchive.0.4.0\\\"",
 					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
 					"JucePlugin_MaxNumInputChannels=2",
 					"JucePlugin_MaxNumOutputChannels=2",
@@ -972,8 +980,8 @@
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
 					"JUCE_VST3_CAN_REPLACE_VST2=0",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
-					"JUCE_APP_VERSION=0.3.0",
-					"JUCE_APP_VERSION_HEX=0x300",
+					"JUCE_APP_VERSION=0.4.0",
+					"JUCE_APP_VERSION_HEX=0x400",
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GENERATE_PKGINFO_FILE = YES;
@@ -992,9 +1000,9 @@
 				MTL_HEADER_SEARCH_PATHS = "$(HOME)/JUCE/modules/juce_audio_processors_headless/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode $(HOME)/JUCE/modules $(HOME)/JUCE/modules/juce_audio_plugin_client/AU";
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_CPLUSPLUSFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited) -bundle -lPHASE\\ SCAR\\ v0_3_0";
+				OTHER_LDFLAGS = "$(inherited) -bundle -lPHASE\\ SCAR\\ v0_4_0";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Vojta.PhaseScar;
-				PRODUCT_NAME = "PHASE SCAR v0_3_0";
+				PRODUCT_NAME = "PHASE SCAR v0_4_0";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				USE_HEADERMAP = NO;
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
@@ -1049,7 +1057,7 @@
 					"JucePlugin_Build_LV2=0",
 					"JucePlugin_Enable_IAA=0",
 					"JucePlugin_Enable_ARA=0",
-					"JucePlugin_Name=\\\"PHASE\\ SCAR\\ 0.3.0\\\"",
+					"JucePlugin_Name=\\\"PHASE\\ SCAR\\ 0.4.0\\\"",
 					"JucePlugin_Desc=\\\"Flanger,\\ distortion\\ and\\ moving\\ notch\\ multi-effect\\\"",
 					"JucePlugin_Manufacturer=\\\"Vojta\\\"",
 					"JucePlugin_ManufacturerWebsite=\\\"https://example.com\\\"",
@@ -1061,9 +1069,9 @@
 					"JucePlugin_ProducesMidiOutput=0",
 					"JucePlugin_IsMidiEffect=0",
 					"JucePlugin_EditorRequiresKeyboardFocus=0",
-					"JucePlugin_Version=0.3.0",
-					"JucePlugin_VersionCode=0x300",
-					"JucePlugin_VersionString=\\\"0.3.0\\\"",
+					"JucePlugin_Version=0.4.0",
+					"JucePlugin_VersionCode=0x400",
+					"JucePlugin_VersionString=\\\"0.4.0\\\"",
 					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
 					"JucePlugin_VSTCategory=kPlugCategEffect",
 					"JucePlugin_Vst3Category=\\\"Fx\\\"",
@@ -1081,13 +1089,13 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757278",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"Vojta:\\ PHASE\\ SCAR\\ 0.3.0\\\"",
+					"JucePlugin_IAAName=\\\"Vojta:\\ PHASE\\ SCAR\\ 0.4.0\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JucePlugin_ARAContentTypes=0",
 					"JucePlugin_ARATransformationFlags=0",
 					"JucePlugin_ARAFactoryID=\\\"com.Vojta.PhaseScar.factory\\\"",
-					"JucePlugin_ARADocumentArchiveID=\\\"com.Vojta.PhaseScar.aradocumentarchive.0.3.0\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.Vojta.PhaseScar.aradocumentarchive.0.4.0\\\"",
 					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
 					"JucePlugin_MaxNumInputChannels=2",
 					"JucePlugin_MaxNumOutputChannels=2",
@@ -1095,8 +1103,8 @@
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
 					"JUCE_VST3_CAN_REPLACE_VST2=0",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
-					"JUCE_APP_VERSION=0.3.0",
-					"JUCE_APP_VERSION_HEX=0x300",
+					"JUCE_APP_VERSION=0.4.0",
+					"JUCE_APP_VERSION_HEX=0x400",
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
@@ -1113,9 +1121,9 @@
 				MTL_HEADER_SEARCH_PATHS = "$(HOME)/JUCE/modules/juce_audio_processors_headless/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode $(HOME)/JUCE/modules $(HOME)/JUCE/modules/juce_audio_plugin_client/AU";
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_CPLUSPLUSFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited) -lPHASE\\ SCAR\\ v0_3_0";
+				OTHER_LDFLAGS = "$(inherited) -lPHASE\\ SCAR\\ v0_4_0";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Vojta.PhaseScar;
-				PRODUCT_NAME = "PHASE SCAR v0_3_0";
+				PRODUCT_NAME = "PHASE SCAR v0_4_0";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				USE_HEADERMAP = NO;
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
@@ -1170,7 +1178,7 @@
 					"JucePlugin_Build_LV2=0",
 					"JucePlugin_Enable_IAA=0",
 					"JucePlugin_Enable_ARA=0",
-					"JucePlugin_Name=\\\"PHASE\\ SCAR\\ 0.3.0\\\"",
+					"JucePlugin_Name=\\\"PHASE\\ SCAR\\ 0.4.0\\\"",
 					"JucePlugin_Desc=\\\"Flanger,\\ distortion\\ and\\ moving\\ notch\\ multi-effect\\\"",
 					"JucePlugin_Manufacturer=\\\"Vojta\\\"",
 					"JucePlugin_ManufacturerWebsite=\\\"https://example.com\\\"",
@@ -1182,9 +1190,9 @@
 					"JucePlugin_ProducesMidiOutput=0",
 					"JucePlugin_IsMidiEffect=0",
 					"JucePlugin_EditorRequiresKeyboardFocus=0",
-					"JucePlugin_Version=0.3.0",
-					"JucePlugin_VersionCode=0x300",
-					"JucePlugin_VersionString=\\\"0.3.0\\\"",
+					"JucePlugin_Version=0.4.0",
+					"JucePlugin_VersionCode=0x400",
+					"JucePlugin_VersionString=\\\"0.4.0\\\"",
 					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
 					"JucePlugin_VSTCategory=kPlugCategEffect",
 					"JucePlugin_Vst3Category=\\\"Fx\\\"",
@@ -1202,13 +1210,13 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757278",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"Vojta:\\ PHASE\\ SCAR\\ 0.3.0\\\"",
+					"JucePlugin_IAAName=\\\"Vojta:\\ PHASE\\ SCAR\\ 0.4.0\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JucePlugin_ARAContentTypes=0",
 					"JucePlugin_ARATransformationFlags=0",
 					"JucePlugin_ARAFactoryID=\\\"com.Vojta.PhaseScar.factory\\\"",
-					"JucePlugin_ARADocumentArchiveID=\\\"com.Vojta.PhaseScar.aradocumentarchive.0.3.0\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.Vojta.PhaseScar.aradocumentarchive.0.4.0\\\"",
 					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
 					"JucePlugin_MaxNumInputChannels=2",
 					"JucePlugin_MaxNumOutputChannels=2",
@@ -1216,8 +1224,8 @@
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
 					"JUCE_VST3_CAN_REPLACE_VST2=0",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
-					"JUCE_APP_VERSION=0.3.0",
-					"JUCE_APP_VERSION_HEX=0x300",
+					"JUCE_APP_VERSION=0.4.0",
+					"JUCE_APP_VERSION_HEX=0x400",
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
@@ -1233,9 +1241,9 @@
 				MTL_HEADER_SEARCH_PATHS = "$(HOME)/JUCE/modules/juce_audio_processors_headless/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode $(HOME)/JUCE/modules $(HOME)/JUCE/modules/juce_audio_plugin_client/AU";
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_CPLUSPLUSFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited) -lPHASE\\ SCAR\\ v0_3_0";
+				OTHER_LDFLAGS = "$(inherited) -lPHASE\\ SCAR\\ v0_4_0";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Vojta.PhaseScar;
-				PRODUCT_NAME = "PHASE SCAR v0_3_0";
+				PRODUCT_NAME = "PHASE SCAR v0_4_0";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				USE_HEADERMAP = NO;
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
@@ -1289,7 +1297,7 @@
 					"JucePlugin_Build_LV2=0",
 					"JucePlugin_Enable_IAA=0",
 					"JucePlugin_Enable_ARA=0",
-					"JucePlugin_Name=\\\"PHASE\\ SCAR\\ 0.3.0\\\"",
+					"JucePlugin_Name=\\\"PHASE\\ SCAR\\ 0.4.0\\\"",
 					"JucePlugin_Desc=\\\"Flanger,\\ distortion\\ and\\ moving\\ notch\\ multi-effect\\\"",
 					"JucePlugin_Manufacturer=\\\"Vojta\\\"",
 					"JucePlugin_ManufacturerWebsite=\\\"https://example.com\\\"",
@@ -1301,9 +1309,9 @@
 					"JucePlugin_ProducesMidiOutput=0",
 					"JucePlugin_IsMidiEffect=0",
 					"JucePlugin_EditorRequiresKeyboardFocus=0",
-					"JucePlugin_Version=0.3.0",
-					"JucePlugin_VersionCode=0x300",
-					"JucePlugin_VersionString=\\\"0.3.0\\\"",
+					"JucePlugin_Version=0.4.0",
+					"JucePlugin_VersionCode=0x400",
+					"JucePlugin_VersionString=\\\"0.4.0\\\"",
 					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
 					"JucePlugin_VSTCategory=kPlugCategEffect",
 					"JucePlugin_Vst3Category=\\\"Fx\\\"",
@@ -1321,13 +1329,13 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757278",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"Vojta:\\ PHASE\\ SCAR\\ 0.3.0\\\"",
+					"JucePlugin_IAAName=\\\"Vojta:\\ PHASE\\ SCAR\\ 0.4.0\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JucePlugin_ARAContentTypes=0",
 					"JucePlugin_ARATransformationFlags=0",
 					"JucePlugin_ARAFactoryID=\\\"com.Vojta.PhaseScar.factory\\\"",
-					"JucePlugin_ARADocumentArchiveID=\\\"com.Vojta.PhaseScar.aradocumentarchive.0.3.0\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.Vojta.PhaseScar.aradocumentarchive.0.4.0\\\"",
 					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
 					"JucePlugin_MaxNumInputChannels=2",
 					"JucePlugin_MaxNumOutputChannels=2",
@@ -1335,8 +1343,8 @@
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
 					"JUCE_VST3_CAN_REPLACE_VST2=0",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
-					"JUCE_APP_VERSION=0.3.0",
-					"JUCE_APP_VERSION_HEX=0x300",
+					"JUCE_APP_VERSION=0.4.0",
+					"JUCE_APP_VERSION_HEX=0x400",
 					"JUCE_SHARED_CODE=1",
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -1355,7 +1363,7 @@
 				OTHER_CPLUSPLUSFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Vojta.PhaseScar;
-				PRODUCT_NAME = "PHASE SCAR v0_3_0";
+				PRODUCT_NAME = "PHASE SCAR v0_4_0";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				USE_HEADERMAP = NO;
@@ -1425,7 +1433,7 @@
 					"JucePlugin_Build_LV2=0",
 					"JucePlugin_Enable_IAA=0",
 					"JucePlugin_Enable_ARA=0",
-					"JucePlugin_Name=\\\"PHASE\\ SCAR\\ 0.3.0\\\"",
+					"JucePlugin_Name=\\\"PHASE\\ SCAR\\ 0.4.0\\\"",
 					"JucePlugin_Desc=\\\"Flanger,\\ distortion\\ and\\ moving\\ notch\\ multi-effect\\\"",
 					"JucePlugin_Manufacturer=\\\"Vojta\\\"",
 					"JucePlugin_ManufacturerWebsite=\\\"https://example.com\\\"",
@@ -1437,9 +1445,9 @@
 					"JucePlugin_ProducesMidiOutput=0",
 					"JucePlugin_IsMidiEffect=0",
 					"JucePlugin_EditorRequiresKeyboardFocus=0",
-					"JucePlugin_Version=0.3.0",
-					"JucePlugin_VersionCode=0x300",
-					"JucePlugin_VersionString=\\\"0.3.0\\\"",
+					"JucePlugin_Version=0.4.0",
+					"JucePlugin_VersionCode=0x400",
+					"JucePlugin_VersionString=\\\"0.4.0\\\"",
 					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
 					"JucePlugin_VSTCategory=kPlugCategEffect",
 					"JucePlugin_Vst3Category=\\\"Fx\\\"",
@@ -1457,13 +1465,13 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757278",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"Vojta:\\ PHASE\\ SCAR\\ 0.3.0\\\"",
+					"JucePlugin_IAAName=\\\"Vojta:\\ PHASE\\ SCAR\\ 0.4.0\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JucePlugin_ARAContentTypes=0",
 					"JucePlugin_ARATransformationFlags=0",
 					"JucePlugin_ARAFactoryID=\\\"com.Vojta.PhaseScar.factory\\\"",
-					"JucePlugin_ARADocumentArchiveID=\\\"com.Vojta.PhaseScar.aradocumentarchive.0.3.0\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.Vojta.PhaseScar.aradocumentarchive.0.4.0\\\"",
 					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
 					"JucePlugin_MaxNumInputChannels=2",
 					"JucePlugin_MaxNumOutputChannels=2",
@@ -1471,8 +1479,8 @@
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
 					"JUCE_VST3_CAN_REPLACE_VST2=0",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
-					"JUCE_APP_VERSION=0.3.0",
-					"JUCE_APP_VERSION_HEX=0x300",
+					"JUCE_APP_VERSION=0.4.0",
+					"JUCE_APP_VERSION_HEX=0x400",
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
@@ -1546,7 +1554,7 @@
 					"JucePlugin_Build_LV2=0",
 					"JucePlugin_Enable_IAA=0",
 					"JucePlugin_Enable_ARA=0",
-					"JucePlugin_Name=\\\"PHASE\\ SCAR\\ 0.3.0\\\"",
+					"JucePlugin_Name=\\\"PHASE\\ SCAR\\ 0.4.0\\\"",
 					"JucePlugin_Desc=\\\"Flanger,\\ distortion\\ and\\ moving\\ notch\\ multi-effect\\\"",
 					"JucePlugin_Manufacturer=\\\"Vojta\\\"",
 					"JucePlugin_ManufacturerWebsite=\\\"https://example.com\\\"",
@@ -1558,9 +1566,9 @@
 					"JucePlugin_ProducesMidiOutput=0",
 					"JucePlugin_IsMidiEffect=0",
 					"JucePlugin_EditorRequiresKeyboardFocus=0",
-					"JucePlugin_Version=0.3.0",
-					"JucePlugin_VersionCode=0x300",
-					"JucePlugin_VersionString=\\\"0.3.0\\\"",
+					"JucePlugin_Version=0.4.0",
+					"JucePlugin_VersionCode=0x400",
+					"JucePlugin_VersionString=\\\"0.4.0\\\"",
 					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
 					"JucePlugin_VSTCategory=kPlugCategEffect",
 					"JucePlugin_Vst3Category=\\\"Fx\\\"",
@@ -1578,13 +1586,13 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757278",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"Vojta:\\ PHASE\\ SCAR\\ 0.3.0\\\"",
+					"JucePlugin_IAAName=\\\"Vojta:\\ PHASE\\ SCAR\\ 0.4.0\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JucePlugin_ARAContentTypes=0",
 					"JucePlugin_ARATransformationFlags=0",
 					"JucePlugin_ARAFactoryID=\\\"com.Vojta.PhaseScar.factory\\\"",
-					"JucePlugin_ARADocumentArchiveID=\\\"com.Vojta.PhaseScar.aradocumentarchive.0.3.0\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.Vojta.PhaseScar.aradocumentarchive.0.4.0\\\"",
 					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
 					"JucePlugin_MaxNumInputChannels=2",
 					"JucePlugin_MaxNumOutputChannels=2",
@@ -1592,8 +1600,8 @@
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
 					"JUCE_VST3_CAN_REPLACE_VST2=0",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
-					"JUCE_APP_VERSION=0.3.0",
-					"JUCE_APP_VERSION_HEX=0x300",
+					"JUCE_APP_VERSION=0.4.0",
+					"JUCE_APP_VERSION_HEX=0x400",
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
@@ -1666,7 +1674,7 @@
 					"JucePlugin_Build_LV2=0",
 					"JucePlugin_Enable_IAA=0",
 					"JucePlugin_Enable_ARA=0",
-					"JucePlugin_Name=\\\"PHASE\\ SCAR\\ 0.3.0\\\"",
+					"JucePlugin_Name=\\\"PHASE\\ SCAR\\ 0.4.0\\\"",
 					"JucePlugin_Desc=\\\"Flanger,\\ distortion\\ and\\ moving\\ notch\\ multi-effect\\\"",
 					"JucePlugin_Manufacturer=\\\"Vojta\\\"",
 					"JucePlugin_ManufacturerWebsite=\\\"https://example.com\\\"",
@@ -1678,9 +1686,9 @@
 					"JucePlugin_ProducesMidiOutput=0",
 					"JucePlugin_IsMidiEffect=0",
 					"JucePlugin_EditorRequiresKeyboardFocus=0",
-					"JucePlugin_Version=0.3.0",
-					"JucePlugin_VersionCode=0x300",
-					"JucePlugin_VersionString=\\\"0.3.0\\\"",
+					"JucePlugin_Version=0.4.0",
+					"JucePlugin_VersionCode=0x400",
+					"JucePlugin_VersionString=\\\"0.4.0\\\"",
 					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
 					"JucePlugin_VSTCategory=kPlugCategEffect",
 					"JucePlugin_Vst3Category=\\\"Fx\\\"",
@@ -1698,13 +1706,13 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757278",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"Vojta:\\ PHASE\\ SCAR\\ 0.3.0\\\"",
+					"JucePlugin_IAAName=\\\"Vojta:\\ PHASE\\ SCAR\\ 0.4.0\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JucePlugin_ARAContentTypes=0",
 					"JucePlugin_ARATransformationFlags=0",
 					"JucePlugin_ARAFactoryID=\\\"com.Vojta.PhaseScar.factory\\\"",
-					"JucePlugin_ARADocumentArchiveID=\\\"com.Vojta.PhaseScar.aradocumentarchive.0.3.0\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.Vojta.PhaseScar.aradocumentarchive.0.4.0\\\"",
 					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
 					"JucePlugin_MaxNumInputChannels=2",
 					"JucePlugin_MaxNumOutputChannels=2",
@@ -1712,8 +1720,8 @@
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
 					"JUCE_VST3_CAN_REPLACE_VST2=0",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
-					"JUCE_APP_VERSION=0.3.0",
-					"JUCE_APP_VERSION_HEX=0x300",
+					"JUCE_APP_VERSION=0.4.0",
+					"JUCE_APP_VERSION_HEX=0x400",
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GENERATE_PKGINFO_FILE = YES;
@@ -1733,9 +1741,9 @@
 				MTL_HEADER_SEARCH_PATHS = "$(HOME)/JUCE/modules/juce_audio_processors_headless/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode $(HOME)/JUCE/modules $(HOME)/JUCE/modules/juce_audio_plugin_client/AU";
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_CPLUSPLUSFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited) -bundle -lPHASE\\ SCAR\\ v0_3_0";
+				OTHER_LDFLAGS = "$(inherited) -bundle -lPHASE\\ SCAR\\ v0_4_0";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Vojta.PhaseScar;
-				PRODUCT_NAME = "PHASE SCAR v0_3_0";
+				PRODUCT_NAME = "PHASE SCAR v0_4_0";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				USE_HEADERMAP = NO;
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
@@ -1785,7 +1793,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_CODE_SIGN_FLAGS = "--dryrun";
-				PRODUCT_NAME = "PHASE SCAR v0_3_0";
+				PRODUCT_NAME = "PHASE SCAR v0_4_0";
 				SDKROOT = macosx;
 				WARNING_CFLAGS = "-Wreorder";
 				ZERO_LINK = NO;
@@ -1840,7 +1848,7 @@
 					"JucePlugin_Build_LV2=0",
 					"JucePlugin_Enable_IAA=0",
 					"JucePlugin_Enable_ARA=0",
-					"JucePlugin_Name=\\\"PHASE\\ SCAR\\ 0.3.0\\\"",
+					"JucePlugin_Name=\\\"PHASE\\ SCAR\\ 0.4.0\\\"",
 					"JucePlugin_Desc=\\\"Flanger,\\ distortion\\ and\\ moving\\ notch\\ multi-effect\\\"",
 					"JucePlugin_Manufacturer=\\\"Vojta\\\"",
 					"JucePlugin_ManufacturerWebsite=\\\"https://example.com\\\"",
@@ -1852,9 +1860,9 @@
 					"JucePlugin_ProducesMidiOutput=0",
 					"JucePlugin_IsMidiEffect=0",
 					"JucePlugin_EditorRequiresKeyboardFocus=0",
-					"JucePlugin_Version=0.3.0",
-					"JucePlugin_VersionCode=0x300",
-					"JucePlugin_VersionString=\\\"0.3.0\\\"",
+					"JucePlugin_Version=0.4.0",
+					"JucePlugin_VersionCode=0x400",
+					"JucePlugin_VersionString=\\\"0.4.0\\\"",
 					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
 					"JucePlugin_VSTCategory=kPlugCategEffect",
 					"JucePlugin_Vst3Category=\\\"Fx\\\"",
@@ -1872,13 +1880,13 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757278",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"Vojta:\\ PHASE\\ SCAR\\ 0.3.0\\\"",
+					"JucePlugin_IAAName=\\\"Vojta:\\ PHASE\\ SCAR\\ 0.4.0\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JucePlugin_ARAContentTypes=0",
 					"JucePlugin_ARATransformationFlags=0",
 					"JucePlugin_ARAFactoryID=\\\"com.Vojta.PhaseScar.factory\\\"",
-					"JucePlugin_ARADocumentArchiveID=\\\"com.Vojta.PhaseScar.aradocumentarchive.0.3.0\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.Vojta.PhaseScar.aradocumentarchive.0.4.0\\\"",
 					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
 					"JucePlugin_MaxNumInputChannels=2",
 					"JucePlugin_MaxNumOutputChannels=2",
@@ -1886,8 +1894,8 @@
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
 					"JUCE_VST3_CAN_REPLACE_VST2=0",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
-					"JUCE_APP_VERSION=0.3.0",
-					"JUCE_APP_VERSION_HEX=0x300",
+					"JUCE_APP_VERSION=0.4.0",
+					"JUCE_APP_VERSION_HEX=0x400",
 					"JUCE_SHARED_CODE=1",
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -1905,7 +1913,7 @@
 				OTHER_CPLUSPLUSFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Vojta.PhaseScar;
-				PRODUCT_NAME = "PHASE SCAR v0_3_0";
+				PRODUCT_NAME = "PHASE SCAR v0_4_0";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				USE_HEADERMAP = NO;

@@ -146,6 +146,9 @@ PhaseScarAudioProcessorEditor::PhaseScarAudioProcessorEditor (PhaseScarAudioProc
     addAndMakeVisible (outputSectionInputMeter);
     addAndMakeVisible (outputSectionOutputMeter);
 
+    spectrumAnalyzer = std::make_unique<PhaseScar::SpectrumAnalyzerComponent> (processorRef);
+    addAndMakeVisible (*spectrumAnalyzer);
+
     setResizable (false, false);
     setSize (editorWidth, editorHeight);
 
@@ -323,6 +326,9 @@ void PhaseScarAudioProcessorEditor::resized()
         content.removeFromLeft (10);
         outputSectionOutputMeter.setBounds (content.removeFromLeft (40).reduced (8, 0));
     }
+
+    if (spectrumAnalyzer != nullptr)
+        spectrumAnalyzer->setBounds (panelContent (centreBounds).reduced (6).withTrimmedBottom (16));
 }
 
 //==============================================================================
@@ -400,40 +406,11 @@ void PhaseScarAudioProcessorEditor::paint (juce::Graphics& g)
     LnF::drawPanel (g, postEqBounds,     "POST EQ",    LnF::accentPurple);
     LnF::drawPanel (g, outputBounds,     "OUTPUT",     LnF::accentPurple);
 
-    // Centre decorative panel (static in this phase)
-    LnF::drawPanel (g, centreBounds, "CORE", LnF::accentPurple);
+    // Centre panel now hosts the real-time spectrum analyzer (see spectrumAnalyzer
+    // child component, positioned in resized()). The panel frame/title is kept.
+    LnF::drawPanel (g, centreBounds, "SPECTRUM", LnF::accentPurple);
 
     auto centreContent = panelContent (centreBounds).reduced (6);
-    const auto& centreImage = PhaseScar::Assets::centrePanel();
-
-    g.setColour (juce::Colours::white);   // full opacity for the image drawing below
-
-    if (centreImage.isValid())
-    {
-        g.drawImageWithin (centreImage, centreContent.getX(), centreContent.getY(),
-                           centreContent.getWidth(), centreContent.getHeight() - 20,
-                           juce::RectanglePlacement::centred | juce::RectanglePlacement::onlyReduceInSize,
-                           false);
-    }
-    else
-    {
-        const auto& symbolImage = PhaseScar::Assets::symbol();
-
-        if (symbolImage.isValid())
-        {
-            g.drawImageWithin (symbolImage, centreContent.getX(), centreContent.getY(),
-                               centreContent.getWidth(), centreContent.getHeight() - 20,
-                               juce::RectanglePlacement::centred | juce::RectanglePlacement::onlyReduceInSize,
-                               false);
-        }
-        else
-        {
-            auto fallback = centreContent.withTrimmedBottom (20).toFloat().reduced (30.0f);
-            g.setColour (LnF::accentPurple.withAlpha (0.35f));
-            g.drawEllipse (fallback, 1.5f);
-            g.drawLine (fallback.getX(), fallback.getCentreY(), fallback.getRight(), fallback.getCentreY(), 1.0f);
-        }
-    }
 
     g.setColour (LnF::textDim);
     g.setFont (juce::Font (juce::FontOptions (10.0f)));

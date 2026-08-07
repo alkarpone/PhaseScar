@@ -715,6 +715,9 @@
     <ClCompile Include="..\..\Source\PluginEditor.cpp">
       <Filter>PhaseScar\Source</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\SpectrumAnalyzerComponent.cpp">
+      <Filter>PhaseScar\Source</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\PhaseScarLookAndFeel.cpp">
       <Filter>PhaseScar\Source</Filter>
     </ClCompile>
@@ -3825,6 +3828,9 @@
     <ClInclude Include="..\..\Source\PluginEditor.h">
       <Filter>PhaseScar\Source</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\SpectrumAnalyzerComponent.h">
+      <Filter>PhaseScar\Source</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\PhaseScarLookAndFeel.h">
       <Filter>PhaseScar\Source</Filter>
     </ClInclude>
@@ -3856,6 +3862,9 @@
       <Filter>PhaseScar\Source\DSP</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\DSP\MeteringData.h">
+      <Filter>PhaseScar\Source\DSP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\DSP\SpectrumFifo.h">
       <Filter>PhaseScar\Source\DSP</Filter>
     </ClInclude>
     <ClInclude Include="A:\JUCE\modules\juce_audio_basics\audio_play_head\juce_AudioPlayHead.h">

@@ -2,8 +2,8 @@
 
 <JUCERPROJECT id="Ps1cAr" name="PhaseScar" projectType="audioplug" useAppConfig="0"
 							addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" pluginFormats="buildVST3,buildStandalone"
-							pluginName="PHASE SCAR 0.3.0" pluginDesc="Flanger, distortion and moving notch multi-effect" pluginManufacturer="Vojta"
-							version="0.3.0"
+							pluginName="PHASE SCAR 0.4.0" pluginDesc="Flanger, distortion and moving notch multi-effect" pluginManufacturer="Vojta"
+							version="0.4.0"
 							pluginManufacturerCode="Vojt" pluginCode="Pscr" pluginChannelConfigs="{1,1},{2,2}"
 							pluginVST3Category="Fx" companyName="Vojta" companyWebsite="https://example.com"
 							defines="JUCE_VST3_CAN_REPLACE_VST2=0">
@@ -16,6 +16,10 @@
 			<FILE id="fPE001" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
 			<FILE id="fPE002" name="PluginEditor.cpp" compile="1" resource="0"
 						file="Source/PluginEditor.cpp"/>
+			<FILE id="fSA001" name="SpectrumAnalyzerComponent.h" compile="0" resource="0"
+						file="Source/SpectrumAnalyzerComponent.h"/>
+			<FILE id="fSA002" name="SpectrumAnalyzerComponent.cpp" compile="1" resource="0"
+						file="Source/SpectrumAnalyzerComponent.cpp"/>
 			<FILE id="fLF001" name="PhaseScarLookAndFeel.h" compile="0" resource="0"
 						file="Source/PhaseScarLookAndFeel.h"/>
 			<FILE id="fLF002" name="PhaseScarLookAndFeel.cpp" compile="1" resource="0"
@@ -41,6 +45,7 @@
 				<FILE id="dsp116" name="OutputProtection.h" compile="0" resource="0" file="Source/DSP/OutputProtection.h"/>
 				<FILE id="dsp117" name="OutputProtection.cpp" compile="1" resource="0" file="Source/DSP/OutputProtection.cpp"/>
 				<FILE id="dsp118" name="MeteringData.h" compile="0" resource="0" file="Source/DSP/MeteringData.h"/>
+				<FILE id="dsp119" name="SpectrumFifo.h" compile="0" resource="0" file="Source/DSP/SpectrumFifo.h"/>
 			</GROUP>
 		</GROUP>
 		<GROUP id="{7A3C2D22-2222-4555-9999-BBBBCCCCDDDE}" name="Assets">
@@ -79,9 +84,9 @@
 		<XCODE_MAC targetFolder="Builds/MacOSX" microphonePermissionNeeded="0"
 							 hardenedRuntime="1" osxCompatibility="10.13 SDK">
 			<CONFIGURATIONS>
-				<CONFIGURATION isDebug="1" name="Debug" targetName="PHASE SCAR v0_3_0"
+				<CONFIGURATION isDebug="1" name="Debug" targetName="PHASE SCAR v0_4_0"
 												 osxArchitecture="Native" macOSDeploymentTarget="10.13"/>
-				<CONFIGURATION isDebug="0" name="Release" targetName="PHASE SCAR v0_3_0"
+				<CONFIGURATION isDebug="0" name="Release" targetName="PHASE SCAR v0_4_0"
 												 osxArchitecture="Standard" macOSDeploymentTarget="10.13"/>
 			</CONFIGURATIONS>
 			<MODULEPATHS>
@@ -103,8 +108,8 @@
 		</XCODE_MAC>
 		<VS2026 targetFolder="Builds/VisualStudio2026">
 			<CONFIGURATIONS>
-				<CONFIGURATION isDebug="1" name="Debug" targetName="PHASE SCAR v0_3_0"/>
-				<CONFIGURATION isDebug="0" name="Release" targetName="PHASE SCAR v0_3_0"/>
+				<CONFIGURATION isDebug="1" name="Debug" targetName="PHASE SCAR v0_4_0"/>
+				<CONFIGURATION isDebug="0" name="Release" targetName="PHASE SCAR v0_4_0"/>
 			</CONFIGURATIONS>
 			<MODULEPATHS>
 				<MODULEPATH id="juce_audio_basics" path="A:/JUCE/modules"/>

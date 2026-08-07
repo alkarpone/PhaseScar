@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="Ps1cAr" name="PhaseScar" projectType="audioplug" useAppConfig="0"
+							addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" pluginFormats="buildVST3,buildStandalone"
+							pluginName="PHASE SCAR 0.3.0" pluginDesc="Flanger, distortion and moving notch multi-effect" pluginManufacturer="Vojta"
+							version="0.3.0"
+							pluginManufacturerCode="Vojt" pluginCode="Pscr" pluginChannelConfigs="{1,1},{2,2}"
+							pluginVST3Category="Fx" companyName="Vojta" companyWebsite="https://example.com"
+							defines="JUCE_VST3_CAN_REPLACE_VST2=0">
+	<MAINGROUP id="Ps8ssN" name="PhaseScar">
+		<GROUP id="{5D81FD81-D290-953B-9661-ED09EBBDA08B}" name="Source">
+			<FILE id="fPP001" name="PluginProcessor.h" compile="0" resource="0"
+						file="Source/PluginProcessor.h"/>
+			<FILE id="fPP002" name="PluginProcessor.cpp" compile="1" resource="0"
+						file="Source/PluginProcessor.cpp"/>
+			<FILE id="fPE001" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+			<FILE id="fPE002" name="PluginEditor.cpp" compile="1" resource="0"
+						file="Source/PluginEditor.cpp"/>
+			<FILE id="fLF001" name="PhaseScarLookAndFeel.h" compile="0" resource="0"
+						file="Source/PhaseScarLookAndFeel.h"/>
+			<FILE id="fLF002" name="PhaseScarLookAndFeel.cpp" compile="1" resource="0"
+						file="Source/PhaseScarLookAndFeel.cpp"/>
+			<FILE id="fAS001" name="PhaseScarAssets.h" compile="0" resource="0"
+						file="Source/PhaseScarAssets.h"/>
+			<FILE id="fAS002" name="PhaseScarAssets.cpp" compile="1" resource="0"
+						file="Source/PhaseScarAssets.cpp"/>
+			<GROUP id="{6A2B1C11-1111-4444-8888-AAAABBBBCCCD}" name="DSP">
+				<FILE id="dsp101" name="PhaseScarParameters.h" compile="0" resource="0" file="Source/DSP/PhaseScarParameters.h"/>
+				<FILE id="dsp102" name="PhaseScarParameters.cpp" compile="1" resource="0" file="Source/DSP/PhaseScarParameters.cpp"/>
+				<FILE id="dsp103" name="Waveshapers.h" compile="0" resource="0" file="Source/DSP/Waveshapers.h"/>
+				<FILE id="dsp104" name="PreEQProcessor.h" compile="0" resource="0" file="Source/DSP/PreEQProcessor.h"/>
+				<FILE id="dsp105" name="PreEQProcessor.cpp" compile="1" resource="0" file="Source/DSP/PreEQProcessor.cpp"/>
+				<FILE id="dsp106" name="FlangerProcessor.h" compile="0" resource="0" file="Source/DSP/FlangerProcessor.h"/>
+				<FILE id="dsp107" name="FlangerProcessor.cpp" compile="1" resource="0" file="Source/DSP/FlangerProcessor.cpp"/>
+				<FILE id="dsp108" name="NotchBankProcessor.h" compile="0" resource="0" file="Source/DSP/NotchBankProcessor.h"/>
+				<FILE id="dsp109" name="NotchBankProcessor.cpp" compile="1" resource="0" file="Source/DSP/NotchBankProcessor.cpp"/>
+				<FILE id="dsp110" name="DistortionStageProcessor.h" compile="0" resource="0" file="Source/DSP/DistortionStageProcessor.h"/>
+				<FILE id="dsp111" name="DistortionStageProcessor.cpp" compile="1" resource="0" file="Source/DSP/DistortionStageProcessor.cpp"/>
+				<FILE id="dsp112" name="PostEQProcessor.h" compile="0" resource="0" file="Source/DSP/PostEQProcessor.h"/>
+				<FILE id="dsp113" name="PostEQProcessor.cpp" compile="1" resource="0" file="Source/DSP/PostEQProcessor.cpp"/>
+				<FILE id="dsp116" name="OutputProtection.h" compile="0" resource="0" file="Source/DSP/OutputProtection.h"/>
+				<FILE id="dsp117" name="OutputProtection.cpp" compile="1" resource="0" file="Source/DSP/OutputProtection.cpp"/>
+				<FILE id="dsp118" name="MeteringData.h" compile="0" resource="0" file="Source/DSP/MeteringData.h"/>
+			</GROUP>
+		</GROUP>
+		<GROUP id="{7A3C2D22-2222-4555-9999-BBBBCCCCDDDE}" name="Assets">
+			<FILE id="asset01" name="phase_scar_logo.png" compile="0" resource="1"
+						file="Assets/phase_scar_logo.png"/>
+			<FILE id="asset02" name="phase_scar_center_panel.png" compile="0" resource="1"
+						file="Assets/phase_scar_center_panel.png"/>
+			<FILE id="asset03" name="phase_scar_background.png" compile="0" resource="1"
+						file="Assets/phase_scar_background.png"/>
+			<FILE id="asset04" name="phase_scar_symbol.png" compile="0" resource="1"
+						file="Assets/phase_scar_symbol.png"/>
+			<FILE id="asset05" name="phase_scar_icons.png" compile="0" resource="1"
+						file="Assets/phase_scar_icons.png"/>
+		</GROUP>
+	</MAINGROUP>
+	<MODULES>
+		<MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+		<MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+		<MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+		<MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"
+						useGlobalPath="0"/>
+		<MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+		<MODULE id="juce_audio_processors_headless" showAllCode="1" useLocalCopy="0"
+						useGlobalPath="0"/>
+		<MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+		<MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+		<MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+		<MODULE id="juce_dsp" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+		<MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+		<MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+		<MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+		<MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+	</MODULES>
+	<JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1"/>
+	<EXPORTFORMATS>
+		<XCODE_MAC targetFolder="Builds/MacOSX" microphonePermissionNeeded="0"
+							 hardenedRuntime="1" osxCompatibility="10.13 SDK">
+			<CONFIGURATIONS>
+				<CONFIGURATION isDebug="1" name="Debug" targetName="PHASE SCAR v0_3_0"
+												 osxArchitecture="Native" macOSDeploymentTarget="10.13"/>
+				<CONFIGURATION isDebug="0" name="Release" targetName="PHASE SCAR v0_3_0"
+												 osxArchitecture="Standard" macOSDeploymentTarget="10.13"/>
+			</CONFIGURATIONS>
+			<MODULEPATHS>
+				<MODULEPATH id="juce_audio_basics" path="~/JUCE/modules"/>
+				<MODULEPATH id="juce_audio_devices" path="~/JUCE/modules"/>
+				<MODULEPATH id="juce_audio_formats" path="~/JUCE/modules"/>
+				<MODULEPATH id="juce_audio_plugin_client" path="~/JUCE/modules"/>
+				<MODULEPATH id="juce_audio_processors" path="~/JUCE/modules"/>
+				<MODULEPATH id="juce_audio_processors_headless" path="~/JUCE/modules"/>
+				<MODULEPATH id="juce_audio_utils" path="~/JUCE/modules"/>
+				<MODULEPATH id="juce_core" path="~/JUCE/modules"/>
+				<MODULEPATH id="juce_data_structures" path="~/JUCE/modules"/>
+				<MODULEPATH id="juce_dsp" path="~/JUCE/modules"/>
+				<MODULEPATH id="juce_events" path="~/JUCE/modules"/>
+				<MODULEPATH id="juce_graphics" path="~/JUCE/modules"/>
+				<MODULEPATH id="juce_gui_basics" path="~/JUCE/modules"/>
+				<MODULEPATH id="juce_gui_extra" path="~/JUCE/modules"/>
+			</MODULEPATHS>
+		</XCODE_MAC>
+		<VS2026 targetFolder="Builds/VisualStudio2026">
+			<CONFIGURATIONS>
+				<CONFIGURATION isDebug="1" name="Debug" targetName="PHASE SCAR v0_3_0"/>
+				<CONFIGURATION isDebug="0" name="Release" targetName="PHASE SCAR v0_3_0"/>
+			</CONFIGURATIONS>
+			<MODULEPATHS>
+				<MODULEPATH id="juce_audio_basics" path="A:/JUCE/modules"/>
+				<MODULEPATH id="juce_audio_devices" path="A:/JUCE/modules"/>
+				<MODULEPATH id="juce_audio_formats" path="A:/JUCE/modules"/>
+				<MODULEPATH id="juce_audio_plugin_client" path="A:/JUCE/modules"/>
+				<MODULEPATH id="juce_audio_processors" path="A:/JUCE/modules"/>
+				<MODULEPATH id="juce_audio_utils" path="A:/JUCE/modules"/>
+				<MODULEPATH id="juce_core" path="A:/JUCE/modules"/>
+				<MODULEPATH id="juce_data_structures" path="A:/JUCE/modules"/>
+				<MODULEPATH id="juce_dsp" path="A:/JUCE/modules"/>
+				<MODULEPATH id="juce_events" path="A:/JUCE/modules"/>
+				<MODULEPATH id="juce_graphics" path="A:/JUCE/modules"/>
+				<MODULEPATH id="juce_gui_basics" path="A:/JUCE/modules"/>
+				<MODULEPATH id="juce_gui_extra" path="A:/JUCE/modules"/>
+				<MODULEPATH id="juce_audio_processors_headless" path="A:/JUCE/modules"/>
+			</MODULEPATHS>
+		</VS2026>
+	</EXPORTFORMATS>
+</JUCERPROJECT>

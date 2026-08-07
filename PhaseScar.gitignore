@@ -1,0 +1,111 @@
+# ============================================================
+# Phase Scar - JUCE / Visual Studio / Projucer
+# ============================================================
+
+# Visual Studio user and workspace files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.VC.db
+*.VC.VC.opendb
+*.opendb
+*.db
+*.ipch
+ipch/
+
+# Visual Studio / MSBuild intermediate files
+*.obj
+*.iobj
+*.pch
+*.pdb
+*.ipdb
+*.ilk
+*.idb
+*.tlog
+*.lastbuildstate
+*.recipe
+*.log
+*.tmp
+*.cache
+*.aps
+
+# Common build output directories
+x64/
+x86/
+Win32/
+Debug/
+Release/
+RelWithDebInfo/
+MinSizeRel/
+build/
+Build/
+cmake-build-*/
+out/
+
+# Build outputs inside Projucer-generated Visual Studio folders
+Builds/**/x64/
+Builds/**/x86/
+Builds/**/Win32/
+Builds/**/Debug/
+Builds/**/Release/
+Builds/**/RelWithDebInfo/
+Builds/**/MinSizeRel/
+
+# Compiled binaries and libraries
+*.exe
+*.dll
+*.lib
+*.exp
+*.app
+*.dylib
+*.so
+*.a
+
+# Audio plugin build products
+*.vst3/
+*.component/
+*.aaxplugin/
+*.lv2/
+*.clap
+*.vst
+*.vst3
+*.component
+*.aaxplugin
+*.lv2
+
+# JUCE standalone/plugin deployment artifacts
+Plugin Copy Step/
+Artefacts/
+Artifacts/
+
+# CMake-generated files, if CMake is used later
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+
+# Package managers
+packages/
+.nuget/
+vcpkg_installed/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.code-workspace
+
+# Temporary and backup files
+*~
+*.bak
+*.old
+*.orig
+*.swp
+*.swo

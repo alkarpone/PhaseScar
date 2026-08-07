@@ -1,69 +1,91 @@
-# Prerequisites
-*.d
+# Vizuální Studio
+.vs/
+.vscode/
+*.sln.DotSettings.user
+*.user
+*.userprefs
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
+# Výstupní soubory
 *.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Linker files
-*.ilk
-
-# Debugger Files
-*.pdb
-
-# Compiled Dynamic libraries
+*.exe
+*.dll
 *.so
 *.dylib
-*.dll
-*.so.*
-
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
+*.lib
+*.a
+*.la
+*.lai
+*.lo
+*.o
+*.slo
 *.lai
 *.la
-*.a
-*.lib
+*.lai
+.libs
+*.dylib.dSYM/
 
-# Executables
-*.exe
-*.out
-*.app
+# Visual Studio build directories
+Debug/
+Release/
+x64/
+x86/
+Win32/
+arm/
+arm64/
 
-# Build directories
-build/
-Build/
-build-*/
+# Binární soubory pluginu
+*.vst3
+*.vst
+*.au
+*.component
+*.bundle
 
-# CMake generated files
+# Dočasné soubory
+*.tmp
+*.temp
+*.log
+*.tlog
+*.aps
+*.ilk
+*.pdb
+*.idb
+
+# CMake
 CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
 Makefile
-install_manifest.txt
-compile_commands.json
 
-# Temporary files
-*.tmp
-*.log
-*.bak
+# Prekladače a cache
+*.exp
+*.lib
+*.pch
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+.project
+.cproject
+.pydevproject
+
+# Operační systém
+.DS_Store
+Thumbs.db
+*.exe
 *.swp
 
-# vcpkg
-vcpkg_installed/
+# Dependencies instalované z externích zdrojů
+/ThirdParty/
+/Dependencies/
+/packages/
 
-# debug information files
-*.dwo
+# Artifacts
+/Artifacts/
+/bin/
+/lib/
 
-# test output & cache
-Testing/
-.cache/
+# Build output
+/Build/
+/Output/

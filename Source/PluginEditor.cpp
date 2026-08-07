@@ -179,6 +179,10 @@ void PhaseScarAudioProcessorEditor::addSlider (SliderWithLabel& s, const juce::S
 
     s.attachment = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment> (
         processorRef.apvts, paramID, s.slider);
+
+    const auto tooltip = PhaseScar::getParameterTooltip (paramID);
+    s.slider.setTooltip (tooltip);
+    s.label.setTooltip (tooltip);
 }
 
 void PhaseScarAudioProcessorEditor::addCombo (ComboWithLabel& c, const juce::String& paramID, const juce::String& labelText)
@@ -198,6 +202,10 @@ void PhaseScarAudioProcessorEditor::addCombo (ComboWithLabel& c, const juce::Str
 
     c.attachment = std::make_unique<juce::AudioProcessorValueTreeState::ComboBoxAttachment> (
         processorRef.apvts, paramID, c.combo);
+
+    const auto tooltip = PhaseScar::getParameterTooltip (paramID);
+    c.combo.setTooltip (tooltip);
+    c.label.setTooltip (tooltip);
 }
 
 void PhaseScarAudioProcessorEditor::addButton (ButtonWithLabel& b, const juce::String& paramID, const juce::String& labelText)
@@ -207,6 +215,8 @@ void PhaseScarAudioProcessorEditor::addButton (ButtonWithLabel& b, const juce::S
 
     b.attachment = std::make_unique<juce::AudioProcessorValueTreeState::ButtonAttachment> (
         processorRef.apvts, paramID, b.button);
+
+    b.button.setTooltip (PhaseScar::getParameterTooltip (paramID));
 }
 
 //==============================================================================

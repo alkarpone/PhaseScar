@@ -181,6 +181,57 @@ namespace PhaseScar
 		}
 	}
 
+	float SpectrumAnalyzerComponent::interpolatedMagnitudeDb (float frequencyHz) const noexcept
+	{
+		const auto sampleRate = processorRef.getSampleRate() > 0.0 ? processorRef.getSampleRate() : 44100.0;
+		const auto binWidth = (float) (sampleRate / (double) fftSize);
+
+		const auto binPosition = juce::jlimit (0.0f, (float) (numBins - 1), frequencyHz / binWidth);
+		const auto bin0 = (int) binPosition;
+		const auto bin1 = juce::jmin (numBins - 1, bin0 + 1);
+		const auto frac = binPosition - (float) bin0;
+
+		return juce::jmap (frac, smoothedMagnitudesDb[(size_t) bin0], smoothedMagnitudesDb[(size_t) bin1]);
+	}
+
+	juce::Path SpectrumAnalyzerComponent::buildSmoothPath (const std::vector<juce::Point<float>>& points)
+	{
+		juce::Path path;
+
+		if (points.empty())
+			return path;
+
+		path.startNewSubPath (points.front());
+
+		if (points.size() < 3)
+		{
+			for (size_t i = 1; i < points.size(); ++i)
+				path.lineTo (points[i]);
+
+			return path;
+		}
+
+		// Catmull-Rom -> cubic Bezier conversion, giving a smooth curve that still
+		// passes through every sampled point (no overshoot ringing thanks to the
+		// 1/6 tangent scaling).
+		const auto numPoints = points.size();
+
+		for (size_t i = 0; i + 1 < numPoints; ++i)
+		{
+			const auto& p0 = points[i == 0 ? i : i - 1];
+			const auto& p1 = points[i];
+			const auto& p2 = points[i + 1];
+			const auto& p3 = points[i + 2 < numPoints ? i + 2 : numPoints - 1];
+
+			const auto c1 = p1 + (p2 - p0) / 6.0f;
+			const auto c2 = p2 - (p3 - p1) / 6.0f;
+
+			path.cubicTo (c1, c2, p2);
+		}
+
+		return path;
+	}
+
 	void SpectrumAnalyzerComponent::pullFifoAndUpdateFft()
 	{
 		auto& fifo = processorRef.spectrumFifo;
@@ -273,38 +324,26 @@ namespace PhaseScar
 		if (! smoothingInitialised)
 			return;
 
-		const auto sampleRate = processorRef.getSampleRate() > 0.0 ? processorRef.getSampleRate() : 44100.0;
-		const auto binWidth = (float) (sampleRate / (double) fftSize);
-
-		juce::Path path;
-		bool started = false;
-
 		const auto pixelWidth = juce::jmax (1, (int) bounds.getWidth());
+
+		std::vector<juce::Point<float>> points;
+		points.reserve ((size_t) pixelWidth);
 
 		for (int px = 0; px < pixelWidth; ++px)
 		{
 			const auto x = bounds.getX() + (float) px;
 			const auto frequency = xToFrequency (x);
 
-			auto bin = (int) (frequency / binWidth);
-			bin = juce::jlimit (0, numBins - 1, bin);
-
-			const auto db = smoothedMagnitudesDb[(size_t) bin];
+			const auto db = interpolatedMagnitudeDb (frequency);
 			const auto y = dbToY (db);
 
-			if (! started)
-			{
-				path.startNewSubPath (x, y);
-				started = true;
-			}
-			else
-			{
-				path.lineTo (x, y);
-			}
+			points.emplace_back (x, y);
 		}
 
+		const auto path = buildSmoothPath (points);
+
 		g.setColour (juce::Colour (0xffe0306a));   // red/magenta
-		g.strokePath (path, juce::PathStrokeType (1.4f));
+		g.strokePath (path, juce::PathStrokeType (1.6f, juce::PathStrokeType::curved, juce::PathStrokeType::rounded));
 	}
 
 	void SpectrumAnalyzerComponent::drawZeroDbReference (juce::Graphics& g, juce::Rectangle<float> bounds) const
@@ -316,10 +355,10 @@ namespace PhaseScar
 
 	void SpectrumAnalyzerComponent::drawNotchResponse (juce::Graphics& g, juce::Rectangle<float> bounds, const NotchFrequencies& freqs) const
 	{
-		juce::Path path;
-		bool started = false;
-
 		const auto pixelWidth = juce::jmax (1, (int) bounds.getWidth());
+
+		std::vector<juce::Point<float>> points;
+		points.reserve ((size_t) pixelWidth);
 
 		for (int px = 0; px < pixelWidth; ++px)
 		{
@@ -329,20 +368,14 @@ namespace PhaseScar
 			const auto db = freqs.enabled ? notchResponseDb (freqs, frequency) : 0.0f;
 			const auto y = dbToY (db);
 
-			if (! started)
-			{
-				path.startNewSubPath (x, y);
-				started = true;
-			}
-			else
-			{
-				path.lineTo (x, y);
-			}
+			points.emplace_back (x, y);
 		}
+
+		const auto path = buildSmoothPath (points);
 
 		const auto colour = juce::Colour (0xffb040ff);   // purple
 		g.setColour (freqs.enabled ? colour : colour.withAlpha (0.25f));
-		g.strokePath (path, juce::PathStrokeType (1.8f));
+		g.strokePath (path, juce::PathStrokeType (1.8f, juce::PathStrokeType::curved, juce::PathStrokeType::rounded));
 	}
 
 	void SpectrumAnalyzerComponent::drawHandles (juce::Graphics& g, juce::Rectangle<float> bounds, const NotchFrequencies& freqs) const

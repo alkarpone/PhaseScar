@@ -4,6 +4,7 @@
 #include "PluginProcessor.h"
 #include "PhaseScarLookAndFeel.h"
 #include "SpectrumAnalyzerComponent.h"
+#include "UI/ParameterTooltips.h"
 
 //==============================================================================
 /** Compact vertical level meter, fed from the UI timer (never from the audio thread). */
@@ -100,6 +101,9 @@ private:
     ButtonWithLabel postEqEnabled;
 
     juce::Label presetDisplay;
+
+    // Enables the ~1s hover tooltips set on every knob/button/combo below.
+    juce::TooltipWindow tooltipWindow { this, 700 };
 
     PhaseScarLevelMeter headerInputMeter { "IN" }, headerOutputMeter { "OUT" };
     PhaseScarLevelMeter outputSectionInputMeter { "IN" }, outputSectionOutputMeter { "OUT" };

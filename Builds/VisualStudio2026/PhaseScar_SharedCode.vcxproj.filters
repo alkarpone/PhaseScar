@@ -5,6 +5,9 @@
     <Filter Include="PhaseScar\Source\DSP">
       <UniqueIdentifier>{54EEBACC-D4D4-0478-086F-40C0E81C96CE}</UniqueIdentifier>
     </Filter>
+    <Filter Include="PhaseScar\Source\UI">
+      <UniqueIdentifier>{CC3ED36B-3C39-0ACF-2058-619AC9ED7920}</UniqueIdentifier>
+    </Filter>
     <Filter Include="PhaseScar\Source">
       <UniqueIdentifier>{E9D1851F-4C6E-7F92-0AD2-5FF43CDB48FC}</UniqueIdentifier>
     </Filter>
@@ -3866,6 +3869,9 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\DSP\SpectrumFifo.h">
       <Filter>PhaseScar\Source\DSP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UI\ParameterTooltips.h">
+      <Filter>PhaseScar\Source\UI</Filter>
     </ClInclude>
     <ClInclude Include="A:\JUCE\modules\juce_audio_basics\audio_play_head\juce_AudioPlayHead.h">
       <Filter>JUCE Modules\juce_audio_basics\audio_play_head</Filter>

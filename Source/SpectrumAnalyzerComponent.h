@@ -66,6 +66,13 @@ namespace PhaseScar
 		void drawNotchResponse (juce::Graphics& g, juce::Rectangle<float> bounds, const NotchFrequencies& freqs) const;
 		void drawHandles (juce::Graphics& g, juce::Rectangle<float> bounds, const NotchFrequencies& freqs) const;
 
+		// Builds a smoothly-curved path (Catmull-Rom interpolated) through the
+		// supplied per-pixel points, rather than connecting them with straight
+		// line segments - this removes the "jagged"/staircase look.
+		static juce::Path buildSmoothPath (const std::vector<juce::Point<float>>& points);
+
+		float interpolatedMagnitudeDb (float frequencyHz) const noexcept;
+
 		//======================================================================
 		PhaseScarAudioProcessor& processorRef;
 
